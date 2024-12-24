@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang=”en”>
+<head>
+ <meta charset=”UTF-8”>
+ <meta name=”viewport” content=”width=device-width, initial-scale=1.0”>
+ <title>Responsive Web Design</title>
+ <link rel=”stylesheet” href=”styles.css”>
+</head>
+<body>
+ <header>
+ <h1>Responsive Web Design Demo</h1>
+ </header>
+ <nav>
+ <ul>
+ <li><a href=”#”>Home</a></li>
+ <li><a href=”#”>About</a></li>
+ <li><a href=”#”>Services</a></li>
+ <li><a href=”#”>Contact</a></li>
+ </ul>
+ </nav>
+ <main>
+ <section>
+ <h2>Welcome to the Demo</h2>
+ <p>This webpage adjusts its layout based on the screen size of the device.</p>
+ </section>
+ <aside>
+ <h3>Quick Links</h3>
+ <ul>
+ <li><a href=”#”>Link 1</a></li>
+ <li><a href=”#”>Link 2</a></li>
+ <li><a href=”#”>Link 3</a></li>
+ </ul>
+ </aside>
+ </main>
+ <footer>
+ <p>&copy; 2024 Responsive Web Design Demo</p>
+ </footer>
+</body>
+</html>
+/* Base Styles */
+Body {
+ Font-family: Arial, sans-serif;
+ Margin: 0;
+ Padding: 0;
+ Box-sizing: border-box;
+}
+Header, footer {
+ Background-color: #333;
+ Color: white;
+ Text-align: center;
+ Padding: 1em 0;
+}
+Nav ul {
+ List-style: none;
+ Padding: 0;
+ Margin: 0;
+ Display: flex;
+ Justify-content: center;
+ Background-color: #444;
+}
+Nav ul li {
+ Margin: 0 15px;
+}
+Nav ul li a {
+ Color: white;
+ Text-decoration: none;
+}
+Main {
+ Display: flex;
+ Flex-wrap: wrap;
+ Padding: 20px;
+}
+Section, aside {
+ Flex: 1 1 45%;
+ Margin: 10px;
+ Padding: 20px;
+ Border: 1px solid #ddd;
+ Background-color: #f9f9f9;
+}
+/* Responsive Design */
+@media (max-width: 768px) {
+ Nav ul {
+ Flex-direction: column;
+ Text-align: center;
+ }
+ Section, aside {
+ Flex: 1 1 100%;
+ }
+}
+@media (max-width: 480px) {
+ Header, footer {
+ Font-size: 14px;
+ }
+ Nav ul li {
+ Margin: 5px 0;
+ }
+}
